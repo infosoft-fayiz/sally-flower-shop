@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <template id="web_flower_insert" name="Flower Details" inherit_id="website_sale.product">
+            <xpath expr="//div[@id='product_details']" position="inside">
+                <h1>Solution Below</h1>
+                <span>Flower Name: </span><span t-out='product.flower_id.common_name' />       
+                <span><br/>Scientific name: </span><span t-out='product.flower_id.scientific_name' />       
+            </xpath>
+        </template>
+    
+    </data>
+</odoo>

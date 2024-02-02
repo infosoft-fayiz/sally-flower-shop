@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="flower_shop_water_menu"
+        name="Watering Times"
+        action="flower_shop_water_action"
+        parent="flower_shop_menu"/>
+
+</odoo>
