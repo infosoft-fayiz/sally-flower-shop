@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="flower_shop_product_menu" name="Flower Products" parent="sale.sale_menu_root" sequence="5" action="flower_shop_product_action" />
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="flower_order_report_action" model="ir.actions.report">
+        <field name="name">Flower Order Report</field>
+        <field name="model">sale.order</field>
+        <field name="report_name">sally-flower-shop.sales_order_report</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="flower_order_paperformat"/>
+    </record>
+
+</odoo>
