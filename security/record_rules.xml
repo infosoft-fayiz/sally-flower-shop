@@ -16,9 +16,7 @@
         <record id="flowers_gardener_rule" model="ir.rule">
             <field name="name">Flower Gardener</field>
             <field name="model_id" ref="model_product_template"/>
-            <field name="domain_force">[(1,'=',1)] if user.user_has_groups('flower_shop_access.gardener_user') else
-                [('is_flower','=',False)]
-            </field>
+            <field name="domain_force">[(1,'=',1)] if user.user_has_groups('sally.group_gardeners') else [('is_flower','=',False)]</field>
             <field name="perm_read">1</field>
             <field name="perm_create">1</field>
             <field name="perm_unlink">1</field>
