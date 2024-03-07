@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- root menu -->
+    <menuitem
+        id="flower_shop_menu"
+        name="Flower Shop"
+        sequence="10"
+        action="flower_shop_action"
+        web_icon="sally-flower-shop,static/description/icon.png"
+        />
+
+</odoo>

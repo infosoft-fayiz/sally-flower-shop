@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="flower_shop_product_action" model="ir.actions.act_window">
+        <field name="name">Flower Products</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_flower', '=', True)]</field>
+        <field name="context">{'default_is_flower': True}</field>
+    </record>
+
+    <record id="flower_shop_product_template_form" model="ir.ui.view">
+        <field name="name">Product is Flower</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='detailed_type']" position="after">
+                <field name="is_flower" />
+                <field name="flower_id" />
+                <!-- <field name="gardeners_ids" /> -->
+                <field name="needs_watering" invisible="1"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="Gardeners" >
+                    <field name="gardeners_ids" />
+                </page>                
+            </xpath>
+        </field>
+    </record>
+
+    
+
+    <record id="fkower_shop_product_template_ribbon" model="ir.ui.view">
+        <field name="name">Flower needs watering</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//widget[@name='web_ribbon']" position="after">
+                <widget name="web_ribbon" title="Needs Watering" attrs="{'invisible':[('needs_watering','=',False)]}"/> 
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

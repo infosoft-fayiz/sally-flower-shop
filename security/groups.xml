@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="flower_shop_access" model="ir.module.category">
+            <field name="name">Flower Shop</field>
+        </record>
+
+        <record id="gardener_user" model="res.groups">
+            <field name="name">Gardener</field>
+            <field name="category_id" ref="flower_shop_access"/>
+            <!-- <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/> -->
+        </record>
+    
+    </data>
+    
+
+</odoo>
